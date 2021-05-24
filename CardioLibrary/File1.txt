@@ -1,0 +1,24 @@
+﻿public static int MediaBattitiGiornaliera(int battiti)
+        {
+            using(StreamWriter w = new StreamWriter("File1.txt"))
+            {
+                Random r = new Random();
+                int somma = 0;
+                int media = 0;
+                for (int i = 0; i<150; i++)
+                {
+
+                    w.WriteLine(battiti = r.Next(60, 100));
+                }
+                media = battiti / 150;
+            }
+        }
+        public static int BattitoCardiacoRiposo(int battiti)
+        {
+
+        }
+        public static int VarabiltàBattito(int battiti)
+        {
+
+        }
+    }
