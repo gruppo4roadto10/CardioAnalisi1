@@ -7,11 +7,49 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="CardioAnalisi" HorizontalAlignment="Left" Height="50" Margin="253,10,0,0" VerticalAlignment="Top" Width="234" FontSize="36" Background="#FFFF3F07" FontWeight="Bold"/>
-        <Label Content="Inserici la tua frequza cardica a riposo" HorizontalAlignment="Left" Height="29" Margin="10,122,0,0" VerticalAlignment="Top" Width="277" FontSize="16"/>
-        <TextBox x:Name="tbxBattiti" HorizontalAlignment="Left" Height="34" Margin="307,122,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113"/>
-        <Button x:Name="btnMostra" Content="Mostra" HorizontalAlignment="Left" Height="24" Margin="437,127,0,0" VerticalAlignment="Top" Width="81" Click="btnMostra_Click"/>
-        <Label x:Name="lblStampa"  HorizontalAlignment="Left" Height="29" Margin="559,122,0,0" VerticalAlignment="Top" Width="206" FontSize="16"/>
-
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FFF6FFED" Offset="0"/>
+                <GradientStop Color="#FFC28EFF" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Inserici la tua frequza cardica a riposo :" HorizontalAlignment="Left" Height="34" Margin="10,128,0,0" VerticalAlignment="Top" Width="277" FontSize="16" FontStyle="Italic"/>
+        <TextBox x:Name="tbxBattiti" HorizontalAlignment="Left" Height="34" Margin="306,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="113" BorderBrush="Red" Background="{x:Null}" FontStyle="Italic" FontSize="16"/>
+        <Button x:Name="btnMostra" Content="Mostra" HorizontalAlignment="Left" Height="34" Margin="447,128,0,0" VerticalAlignment="Top" Width="81" Click="btnMostra_Click" FontSize="16" FontWeight="Bold" Background="#FFFF5959"/>
+        <Label x:Name="lblStampa"  HorizontalAlignment="Left" Height="34" Margin="557,128,0,0" VerticalAlignment="Top" Width="206" FontSize="16" Background="#FFFFC2C2" FontStyle="Italic"/>
+        <Label Content="Cardio Analisi" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="307,10,0,0" Width="211" Background="{x:Null}" FontSize="24" FontWeight="Bold" FontFamily="Segoe UI Black"/>
+        <Label Content="Inserisci la tua età:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,69,0,0" Width="149" FontSize="16"/>
+        <TextBox x:Name="txbEta" HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="167,69,0,0" Background="{x:Null}" BorderBrush="#FF0040FF"/>
+        <Button x:Name="btnConsigliati" Content="Mostra" HorizontalAlignment="Left" VerticalAlignment="Top" Width="79" Margin="321,69,0,0" Height="31" Background="#FF3D6EFF" FontSize="16" FontWeight="Bold" Click="btnConsigliati_Click" />
+        <Label Content="Battiti consigliati:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="423,69,0,0" Width="135" FontSize="16" RenderTransformOrigin="2.005,0.348"/>
+        <Label x:Name="lblBattitiConsigliati" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="563,69,0,0" Width="200" FontSize="16" Background="#FF6B90FF"/>
+        <Label Content="Età:" HorizontalAlignment="Left" Height="34" Margin="10,181,0,0" VerticalAlignment="Top" Width="35" FontSize="16" FontStyle="Italic"/>
+        <TextBox x:Name="txbEtà" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Margin="45,181,0,0" Background="{x:Null}" BorderBrush="#FFFFD100" FontSize="16" FontStyle="Italic"/>
+        <Label Content="Peso:" HorizontalAlignment="Left" Height="34" Margin="163,181,0,0" VerticalAlignment="Top" Width="44" FontSize="16" FontStyle="Italic" RenderTransformOrigin="2.184,0.548"/>
+        <TextBox x:Name="txbPeso" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Margin="207,181,0,0" Background="{x:Null}" BorderBrush="#FFFFD100" FontSize="16" FontStyle="Italic" RenderTransformOrigin="0.067,0.484"/>
+        <Label Content="Frequenza Cardiaca:" HorizontalAlignment="Left" Height="34" Margin="308,181,0,0" VerticalAlignment="Top" Width="150" FontSize="16" FontStyle="Italic" RenderTransformOrigin="2.184,0.548"/>
+        <TextBox x:Name="txbFrequenza" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Margin="463,181,0,0" Background="{x:Null}" BorderBrush="#FFFFD100" FontSize="16" FontStyle="Italic" RenderTransformOrigin="0.959,0.612"/>
+        <Label Content="Durata:" HorizontalAlignment="Left" Height="34" Margin="587,181,0,0" VerticalAlignment="Top" Width="69" FontSize="16" FontStyle="Italic" RenderTransformOrigin="2.184,0.548"/>
+        <TextBox x:Name="txbDurata" HorizontalAlignment="Left" Height="34" TextWrapping="Wrap" VerticalAlignment="Top" Width="55" Margin="661,181,0,0" Background="{x:Null}" BorderBrush="#FFFFD100" FontSize="16" FontStyle="Italic"/>
+        <Button x:Name="btnFreqUomo" Content="Mostra" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="198,234,0,0" Height="38" Background="#FFFFD100" FontFamily="Segoe All" FontSize="16" FontWeight="Bold" Click="btnFreqUomo_Click"/>
+        <Button x:Name="btnFreqDonna" Content="Mostra" HorizontalAlignment="Left" VerticalAlignment="Top" Width="80" Margin="597,234,0,0" Height="38" FontSize="16" FontFamily="Segoe All" FontWeight="Bold" Background="#FFFFD100" Click="btnFreqDonna_Click_1"/>
+        <Label Content="Calorie bruciate uomo:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,234,0,0" Width="171" FontSize="16" Height="38"/>
+        <Label Content="Calorie bruciate donna:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="410,236,0,0" Width="171" FontSize="16" Height="38"/>
+        <Label x:Name="lblUomo" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="306,234,0,0" Height="36" Width="85" Background="#FFFFE77D"/>
+        <Label x:Name="lblDonna" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="705,236,0,0" Width="77" Height="34" Background="#FFFFE77D" FontStyle="Italic"/>
+        <Label Content="Km percorsi:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,294,0,0" Width="107" FontSize="16" Height="38"/>
+        <TextBox x:Name="txbKM" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Margin="122,294,0,0" Background="{x:Null}" BorderBrush="#FFAEFF00"/>
+        <Label Content="Peso corporeo:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="196,294,0,0" Width="116" FontSize="16" Height="38"/>
+        <TextBox x:Name="txbPesoCorporeo" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Margin="321,294,0,0" Background="{x:Null}" BorderBrush="#FFAEFF00" RenderTransformOrigin="1.853,0.54"/>
+        <Button x:Name="btnCorsa" Content="Mostra" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Margin="399,294,0,0" Height="38" FontSize="16" FontFamily="Segoe All" FontWeight="Bold" Background="#FFAEFF00" Click="btnCorsa_Click" RenderTransformOrigin="0.001,0.511"/>
+        <Label x:Name="lblCorsa" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="640,294,0,0" Width="113" Height="38" FontStyle="Italic" Background="#FFCDFF63" RenderTransformOrigin="0.935,0.511"/>
+        <Label Content="Spesa energetica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="504,296,0,0" Width="131" FontSize="16" Height="38"/>
+        <Label Content="Km percorsi:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10,356,0,0" Width="107" FontSize="16" Height="38"/>
+        <TextBox x:Name="txbKM2" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Margin="122,356,0,0" Background="{x:Null}" BorderBrush="#FF9CFFFB"/>
+        <Label Content="Peso corporeo:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="196,356,0,0" Width="116" FontSize="16" Height="38"/>
+        <TextBox x:Name="txbPesoCorporeo2" HorizontalAlignment="Left" Height="38" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Margin="321,356,0,0" Background="{x:Null}" BorderBrush="#FF9CFFFB" RenderTransformOrigin="1.853,0.54"/>
+        <Label x:Name="lblCamminata" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="640,356,0,0" Width="113" Height="38" FontStyle="Italic" Background="#FF9CFFFB" RenderTransformOrigin="0.935,0.511"/>
+        <Label Content="Spesa energetica" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="504,358,0,0" Width="131" FontSize="16" Height="38"/>
+        <Button x:Name="btnCamminata" Content="Mostra" HorizontalAlignment="Left" VerticalAlignment="Top" Width="84" Margin="399,358,0,0" Height="36" Background="#FF33FFF6" FontSize="16" FontFamily="Segoe All" FontWeight="Bold" Click="btnCamminata_Click"/>
     </Grid>
 </Window>

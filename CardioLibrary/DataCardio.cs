@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 namespace CardioLibrary
@@ -58,7 +59,67 @@ namespace CardioLibrary
             double spesaEnergetica = 0.50 * kmpercorsi * pesocorporeo;
             return spesaEnergetica;
         }
+        public static void GeneraBattiti()
+        {
+            Random n = new Random();
+            using (StreamWriter w = new StreamWriter("File1.txt"))
+            {
+                for (int i = 0; i < 1440; i++)
+                {
+                    w.WriteLine(n.Next(50,71));
+                }
+                w.Flush();
+            }
+        }
+        public static double MediaBattiti(string file)
+        {
+            double somma = 0, totale;
+            using (StreamReader r = new StreamReader(file))
+            {
+                string line;
+                while ((line = r.ReadLine()) != null)
+                {
+                    int n = int.Parse(Console.ReadLine());
+                    somma += n;
+                }
+                totale = somma / 1440;
+                totale = Math.Round(totale, 2);
+            }
+            return totale;
 
+        }
+        public static int BattitiaRiposo(string file)
+        {
+            List<int> dati = new List<int>();
+            using (StreamReader r = new StreamReader(file))
+            {
+                string line;
+                while ((line = r.ReadLine()) != null)
+                {
+                    
+                    dati.Add(int.Parse(line));
+                }
+            }
+            dati.Sort();
+            int min = dati[0];
+            return min;
+        }
+        public static int VariabilitàBattiti(string file)
+        {
+            List<int> dati = new List<int>();
+            using StreamReader r = new StreamReader(file);
+            string line;
+            while ((line = r.ReadLine()) != null)
+            {
+                
+                dati.Add(int.Parse(line));
+            }
+            dati.Sort();
+            int min = dati[0];
+            int max = dati[1439];
+            int variabilità = max - min;
+            return variabilità;
+        }
     }
 }
 

@@ -65,9 +65,6 @@ namespace DataCardio_Test
             Assert.AreEqual(valoreAspettato, valoreRitorno, valoreFisso);
 
         }
-        
-
-
 
     }
 }
